@@ -10,3 +10,9 @@ output "private_subnet_id" {
 output "nat_gateway_id" {
   value = aws_nat_gateway.my-nat-gateway[*].id
 }
+output "igw" {
+  value = aws_internet_gateway.my-igw.id
+}
+output "availability-zones" {
+  value = data.aws_availability_zones.available.names
+}
